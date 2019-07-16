@@ -52,7 +52,7 @@
         
         // 启动事件接收
         imgView.userInteractionEnabled = YES;
-        
+        imgView.tag =i%6+1;
         // 创建点击手势
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pressTap:)];
         
@@ -80,6 +80,7 @@
     // 一个视图只能有一个根视图 传递视图的方法不可行
 //    imageView.imageView = imgView;
     imageView.image = imgView.image;
+    imageView.imageTag = imgView.tag;
     
     [self.navigationController pushViewController:imageView animated:YES];
 }

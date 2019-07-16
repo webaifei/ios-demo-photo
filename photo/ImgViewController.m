@@ -28,6 +28,8 @@
     CGFloat height = 450*windowWidth/800;
     CGFloat y = (windowHeight - height)/2;
     _imageView = [[UIImageView alloc] init];
+    NSString *imgName = [[NSString alloc] initWithFormat:@"%d.jpg", _imageTag];
+    _image = [UIImage imageNamed:imgName];
     _imageView.image = _image;
     _imageView.frame = CGRectMake(0, y, windowWidth, height);
     
